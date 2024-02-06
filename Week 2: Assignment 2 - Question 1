@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int bit;
+    int onesCount = 0;
+
+    while (1) {
+        scanf("%d", &bit);
+
+        if (bit == -1) {
+            break;
+        }
+
+        if (bit == 0 || bit == 1) {
+            onesCount += bit;
+        } else {
+            return 1;
+        }
+    }
+
+    if (onesCount % 2 == 0) {
+        printf("1");
+    } else {
+        printf("0");
+    }
+
+    return 0;
+}
