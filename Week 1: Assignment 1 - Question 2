@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+
+    int second_largest;
+    
+    if ((a > b && a < c) || (a < b && a > c)) {
+        second_largest = a;
+    } else if ((b > a && b < c) || (b < a && b > c)) {
+        second_largest = b;
+    } else {
+        second_largest = c;
+    }
+
+    printf("%d", second_largest);
+
+    return 0;
+}
